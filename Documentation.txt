@@ -1,0 +1,43 @@
+USAGE OF FILE HANDLING CONCEPTS !! 
+ifstream - For Reading Inputs from the File.
+ofstream - For Writing to the File.
+fstream - For both reading or Writing. 
+------------------------------------------------------------------------------------------------------------
+Generally prefer the one which is used for what !! (Dont use fstream unless required) 
+------------------------------------------------------------------------------------------------------------
+Before any operation we need to open the file !! 
+For opening the file we make use  of the open function. 
+------------------------------------------------------------------------------------------------------------
+SYNTAX : open(filename, mode) 
+ios::in => Open for input operations.
+ios::out => Open for output operations.
+ios::binary => Open in binary mode.
+ios::ate =>	Set the initial position at the end of the file. If this flag 
+            is not set, the initial position is the beginning of the file.
+ios::app => All output operations are performed at the end of the file, 
+            appending the content to the current content of the file.
+ios::trunc => If the file is opened for output operations and it already 
+              existed, its previous content is deleted and replaced by the new one.
+------------------------------------------------------------------------------------------------------------
+After all the operations we need to close the files so that the Operating System is notified about 
+it and the resources being captured by it are available to use.
+
+------------------------------------------------------------------------------------------------------------
+In order to get and print each and every line we use something like - 
+string line; 
+fin.getline(file, line); 
+
+---------------------------------------------------------------------------
+These are some helpers, that might be useful. 
+---------------------------------------------------------------------------
+The goal of this project is to make a test case generator for competitive programming problems. 
+As of now the main motive is to make a console based application, which can later be turned to an android application 
+or a desktop application. 
+---------------------------------------------------------------------------
+Input should be of the form : 
+[ Total Number of test cases desired ] 
+
+[ How many lines of random numbers are desired ]
+[ How many random numbers in first line ] [ lower_bound ] [ upper_bound ] 
+[ ..... nth line ] 
+---------------------------------------------------------------------------
